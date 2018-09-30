@@ -1,0 +1,61 @@
+/*============================
+=            Hero            =
+============================*/
+
+.products{
+  display: flex;
+  justify-content: space-between;
+}
+
+.products__item{
+  max-width: 320px;
+  width: 100%;
+}
+
+.product{
+  display: block;
+  background-color: #fff;
+  position: relative;
+
+  //width: 300px;
+
+  border-top: 2px solid #f00;
+  border-bottom: 2px solid #f00;
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 100%;
+    background-color: #fff;
+  }
+  &:before {
+    left: -15px;
+    bottom: -2px;
+    border-left: 2px solid #f00;
+    border-bottom: 2px solid #f00;
+    height: calc(100% - 15px);
+    border-radius: 0 0 0 5px;
+  }
+  &:after {
+    right: -15px;
+    top: -2px;
+    border-top: 2px solid #f00;
+    border-bottom: 2px solid #f00;
+    border-right: 2px solid #f00;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.product__outer {
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  transform: rotate(45deg);
+  background-color: #fff;
+  top: 4px;
+  left: -11px;
+  border-left: 2px solid #f00;
+}
+
+

@@ -1,0 +1,11 @@
+//-=======================================
+ =           Navigation Mixin            =
+ =========================================
+-
+  var nav = [{ name: index,        url: contactsURL},
+             { name: index,        url: contactsURL},
+             { name: index,        url: contactsURL}]
+
+mixin nav(url, name, active)
+  li.nav__item(class={'active': active})
+    a.nav__link(href=url)= name

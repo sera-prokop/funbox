@@ -1,0 +1,29 @@
+//-=============================
+ =           Modals            =
+ ===============================
+.modal_container
+
+  .overlay
+
+  .modal(data-modal='callback')
+    .modal__close
+      +svg('close')
+    .modal__title Заказать звонок
+    p.modal__text Заполните форму и наши специалисты свяжутся с Вами в ближайшее время
+    form.modal__form
+      input(type='hidden' name='project_name' value=site)
+      input(type='hidden' name='admin_email' value=adminEmail)
+      input(type='hidden' name='form_subject' value="Заявка на звонок")
+      label.modal__label.label
+        input.modal__input.input(type='text' name='name' placeholder='Имя')
+        +svg('error')
+        +svg('valid')
+      label.modal__label.label
+        input.modal__input.input(type='phone' name='phone' placeholder='Телефон')
+        +svg('error')
+        +svg('valid')
+      label.modal__label.label
+        input.modal__input.input(type='email' name='email' placeholder='E-mail')
+        +svg('error')
+        +svg('valid')
+      button.modal__button.btn(type='submit') Заказать звонок

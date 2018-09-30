@@ -1,0 +1,55 @@
+/*==========================
+=            UI            =
+==========================*/
+.btn {
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+.navicon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+  width: 25px;
+  height: 16px;
+  padding: 10px;
+  cursor: pointer;
+  &__icon {
+    width: 25px;
+    height: 2px;
+    background: $black;
+    transition: background 0.2s 0.15s;
+    &:before,&:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 10px;
+      width: 25px;
+      height: 2px;
+      background: $black;
+      transition: top 0.2s linear 0.15s, bottom 0.15s linear 0.15s, transform 0.15s linear;
+    }
+    &:before {
+      top: 10px;
+    }
+    &:after {
+      bottom: 10px;
+    }
+    .active > & {
+      background: none;
+      transition: background 0.2s;
+      &:before {
+        top: 17px;
+        transform: rotate(45deg);
+        transition: top 0.15s linear, transform 0.15s linear 0.15s;
+      }
+      &:after {
+        bottom: 17px;
+        transform: rotate(-45deg);
+        transition: bottom 0.15s linear, transform 0.15s linear 0.15s;
+      }
+    }
+  }
+}

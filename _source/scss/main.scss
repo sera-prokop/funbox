@@ -1,0 +1,38 @@
+//=============================================
+//=            Responsive Template            =
+//=============================================
+//----------  Variables  ----------
+// colors
+$black: black;
+$white: white;
+
+$error: #f13a30;
+$valid: #50d166;
+
+// other
+$font: 'Verdana';
+
+//=======================================
+//=            Common Styles            =
+//=======================================
+@import '_vendor/breakpoint';
+@include breakpoint-set('default feature', max-width);
+
+@import 'common/**/*.scss';
+
+//=================================
+//=            Partial            =
+//=================================
+@import 'partial/**/*.scss';
+
+
+//==================================
+//=            Sections            =
+//==================================
+@import 'sections/**/*.scss';
+
+
+//=================================
+//=            Content            =
+//=================================
+@import 'content/**/*.scss';

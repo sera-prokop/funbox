@@ -1,0 +1,28 @@
+/*==============================
+=            Mixins            =
+==============================*/
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+%bg {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+%iconToLeft {
+  display: flex;
+  align-items: center;
+  svg {
+    order: -1;
+  }
+}
+%inCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}

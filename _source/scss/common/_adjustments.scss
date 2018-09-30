@@ -1,0 +1,137 @@
+/*===================================
+=            Adjustments            =
+===================================*/
+html {
+  font-size: 1em;
+}
+html,body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  font-weight: normal;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+audio,canvas,iframe,img,svg,video {
+  vertical-align: middle;
+}
+img {
+  user-select: none;
+  flex-shrink: 0;
+}
+video {
+  &::-webkit-media-controls-play-button,
+  &::-webkit-media-controls-timeline,
+  &::-webkit-media-controls-volume-slider,
+  &::-webkit-media-controls-mute-button,
+  &::-webkit-media-controls-fullscreen-button {
+    cursor: pointer;
+  }
+  &::-webkit-media-controls-panel {
+    background: white;
+  }
+  & + svg {
+    position: absolute;
+    top: 50%;left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  &[controls] + svg {
+    display: none;
+  }
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+label {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  span {
+    position: absolute;
+    bottom: 100%;
+    padding-bottom: 5px;
+  }
+  &:after {
+    position: absolute;
+    z-index: 1;
+    top: 100%;left: 15px;
+    font-size: 12px;
+    line-height: 12px;
+    color: $error;
+    padding-top: 2px;
+  }
+  &.not-number:after {
+    content: 'Только цифры';
+  }
+  &.empty:after {
+    content: 'Поле не может быть пустым';
+  }
+}
+textarea,input,button {
+  display: block;
+  width: 100%;
+  font-family: $font;
+  color: $black;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+textarea {
+  resize: none;
+}
+input {
+  font-size: 16px;
+  line-height: 16px;
+  background: none;
+  padding: 0 25px 0 15px;
+  border: 1px solid #eee;
+  &[type='checkbox'] {
+    display: none;
+  }
+  &::placeholder {
+    opacity: 0.5;
+    color: $black;
+  }
+  &.error {
+    border-color: $error;
+  }
+  &.valid {
+    border-color: $valid;
+    .not-number > & {
+      border-color: $error;
+    }
+  }
+}
+button {
+  cursor: pointer;
+  user-select: none;
+}

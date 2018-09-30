@@ -1,0 +1,6 @@
+//-================================
+ =           SVG Mixin            =
+ ==================================
+mixin svg(name)
+  svg(class="svg svg--" + name)
+    use(xlink:href="#svg--" + name)

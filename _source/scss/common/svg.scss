@@ -1,0 +1,43 @@
+/*===========================
+=            SVG            =
+===========================*/
+.svg--container {
+  display: none;
+}
+.svg {
+  flex-shrink: 0;
+}
+.svg--error,.svg--valid {
+  position: absolute;
+  top: 50%; right: 5px;
+  padding: 5px;
+  margin-top: -10px;
+}
+.svg--error {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  z-index: -1;
+  cursor: pointer;
+  fill: $error;
+  input.error + & {
+    opacity: 1;
+    z-index: 1;
+    transition: opacity 0.2s;
+  }
+}
+.svg--valid {
+  width: 10px;
+  height: 9px;
+  fill: $valid;
+  transform: scale(0);
+  transition: transform 0.2s;
+  input.valid + .svg--error + & {
+    transform: scale(1);
+  }
+}
+.svg--close {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+}
