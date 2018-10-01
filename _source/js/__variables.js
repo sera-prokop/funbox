@@ -13,7 +13,7 @@ var landing = $('.container'),
     downloadedPresentation = $('.modal__link[href="modal-downloaded-presentation"]'),
 
     winPos,winHeight,landingHeight,prevModal;
-console.log(winPos)
+// console.log(winPos)
 
 $(window).on('ready load scroll resize',function(e) {
 

@@ -10,7 +10,7 @@ module.exports = function() {
       .pipe(sourcemaps.init())
       .pipe(sass()).on('error', notify.onError({ title: 'Ошибка в SCSS!' }))
       .pipe(autoprefixer({ browsers: config.autoprefixer }))
-      .pipe(cssUnit({ type: 'px-to-rem', rootSize: 16 }))
+      // .pipe(cssUnit({ type: 'px-to-rem', rootSize: 16 }))
       .pipe(csso({ restructure: true }))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(path.public + '/css'))

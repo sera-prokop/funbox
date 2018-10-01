@@ -4,13 +4,18 @@
 
 ul.products
   each item, index in products
-    li.products__item
-      a(href="#").product
-        .product__outer
-        p.product__top-text=item.toptext
-        h2.product__title=item.title
-        h3.product__subtitle=item.subtitle
-        p.product__descr !{item.descr}
-        img(src='/img/photo.png')
-
-    //TODO: разобраться с уголком
+    li.products__item(data-item=index class=item.disabled ? 'disabled' : 'js-selected')
+      .products__item-wrap
+        a(href="#").product
+          .product__wrap
+            p.product__top-text=item.topText
+            h2.product__title=item.title
+            h3.product__subtitle=item.subtitle
+            p.product__descr !{item.descr}
+            img(src='/img/photo.png')
+            .product__weight
+              p=item.weight
+                span кг
+        p.product__bottom-text=item.bottomText
+          if(item.bottomLink)
+            a(class=item.bottomLink href='#') купи.

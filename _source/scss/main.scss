@@ -5,12 +5,24 @@
 // colors
 $black: black;
 $white: white;
+$gray: #666666;
+
+$default_color: #1698d9;
+$disabled_color: #b3b3b3;
+$hover_color: #2ea8e6;
+$selected_color: #d91667;
+$selected_hover_color: #e52e7a;
+
+$tr: 0.25s;
+
+$productBg: #f2f2f2;
 
 $error: #f13a30;
 $valid: #50d166;
 
 // other
-$font: 'Verdana';
+$font: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+$semiFont: 'Exo 2.0', Helvetica, Arial, sans-serif;
 
 //=======================================
 //=            Common Styles            =
