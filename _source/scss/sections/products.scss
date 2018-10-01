@@ -1,5 +1,5 @@
 /*============================
-=            Hero            =
+=         Products           =
 ============================*/
 
 .products{
@@ -44,11 +44,9 @@
       content: '';
       position: absolute;
       left: -41px;
-      top: 0px;
-      //top: -20px;
+      top: 0;
       border-radius: 10px;
       width: calc(100% + 41px);
-      //height: calc(100% + 20px);
       height: 100%;
       background: linear-gradient(135deg, transparent 30px, rgba(255, 255, 255, 0.7) 0) top left;
       z-index: 10;
